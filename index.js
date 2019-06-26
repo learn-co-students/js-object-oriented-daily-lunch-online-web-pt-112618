@@ -145,15 +145,15 @@ static byPrice() {
 }
 }
 
-// class Delivery{
-//   constructor(mealId, neighborhoodId, customerId) {
-//     this.mealId = mealId;
-//     this.neighborhoodId = neighborhoodId;
-//     this.customerId = customerId;
-//     this.id = ++deliveryId;
-//     store.deliveries.push(this)
-//
-//   }
+class Delivery{
+  constructor(meal, neighborhood, customer) {
+    this.mealId = meal;
+    this.neighborhoodId = neighborhood;
+    this.customerId = customer;
+    this.id = ++deliveryId;
+    store.deliveries.push(this)
+
+  }
 //   meal() {
 //     return store.meals.filter(function(meal){
 //       return this.mealId == meal.id
@@ -173,15 +173,15 @@ static byPrice() {
 //   }
 // }
 
-class Delivery {
-  constructor(mealId, neighborhoodId, customerId) {
-    this.id = deliveryId++
-    this.mealId = mealId
-    this.neighborhoodId = neighborhoodId
-    this.customerId = customerId
-    store.deliveries.push(this)
-  }
-
+// class Delivery {
+//   constructor(mealId, neighborhoodId, customerId) {
+//     this.id = deliveryId++
+//     this.mealId = mealId
+//     this.neighborhoodId = neighborhoodId
+//     this.customerId = customerId
+//     store.deliveries.push(this)
+//   }
+//
   meal() {
     return store.meals.find(meal =>
       meal.id === this.mealId
